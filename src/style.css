@@ -6,17 +6,17 @@
     font-family: sans-serif;
     font-weight: lighter;
     outline: none;
+
 }
 
 html {
-    background-color: #1119;
+    background-color: #2F2235;
 }
 
 
 .home,
 .favDrinks,
-.contact,
-.drinkFinder {
+.contact{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -35,24 +35,14 @@ html {
 .contact {
     background-color: purple;
 }
+/* /////////////////////////////////////// */
 
-.drinkFinder {
-    background-color: lightsalmon;
-}
-///////////////////////////////////////
-.app-container {
-
-}
-
-.app-container > button {
-    
-}
 
 .nav {
     display: flex;
     flex-direction: column;
     width: 100px;
-    background-color: #1119;
+    background-color: #ff69b4b6;
     height: 100vh;
     align-items: center;
     position: absolute;
@@ -70,7 +60,7 @@ html {
 }
 
 .nav a {
-    color: white;
+    color: cornflowerblue;
     width: 100%;
     text-align: center;
     padding: 5px 0;
@@ -80,11 +70,11 @@ html {
 
 .nav a:visited,
 .nav a:active {
-    color: white;
+    color: blue;
 }
 
 .nav a:hover {
-    background-color: #5559;
+    background-color: cornflowerblue;
 }
 
 .overlay {
@@ -111,12 +101,13 @@ html {
     border: none;
     right: 0;
     padding: 10px;
-    margin: 10px;
+    /* margin: 10px; */
     /* border: 1px solid black; */
     /* border-radius: 4px; */
     z-index: 1; /* the button is directly behind the overlay */
     transform: rotate(90deg);
     transition: transform 200ms linear, opacity 300ms linear;
+    transform-origin: center center;
 }
 
 .rotate-open {
@@ -159,6 +150,7 @@ html {
 }
 
 .beerIcon{
+    margin-top: 15px;
     background-image: url('./media/beer-icon.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -167,3 +159,157 @@ html {
     height: 50px;
 }
 /* ///////////////////////////////////////////////// */
+.app-container{
+    color: #d29062;
+    background-color: #2F2235;
+}
+
+.app-container > form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ffd59a;
+    border-radius: 10px;
+    background-color: rgba(43, 65, 98, 0.726);
+    width: 50vh;
+    margin: 0 auto;
+}
+
+.app-container > h1 {
+    text-align: center;
+}
+
+.app-container > h6 {
+    text-align: center;
+}
+
+.app-container > form > input {
+    margin: 10px 0;
+    text-align: center;
+    
+}
+
+.app-container > form > button {
+    padding: 4px 0;
+    border-radius: 3px;
+}
+
+.listed-beers{
+    display: flex;
+    flex-direction: column;
+    /* margin: 10px auto; */
+}
+
+.beer-div {
+    color: #d29062;
+    background-color: rgba(43, 65, 98, 0.726);
+    border-radius: 10px;
+    border: 2px solid #ffd59a;
+    margin: 10px;
+    height: auto;
+    /* width: 500px; */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.beer-name{
+    text-align: center;
+}
+
+.beer-pic-and-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px 0;
+    
+}
+
+.description{
+    margin: 0 25px;
+}
+
+.beer-pic{
+    background-size: cover;
+}
+
+
+/* ///////////////////////////// */
+
+@media only screen and (min-width: 600px){
+    .nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100vw;
+        background-color: #ff69b4b6;
+        height: 100px;
+        top: 0;
+        transition: top 300ms linear ;
+    }
+    
+    .nav-open {
+        top: 0;
+    }
+    
+    .nav-closed {
+        top: -100px;
+    }
+
+    .overlay {
+        width: 100vw;
+        height: 100vh;
+        background-color:transparent;
+    }
+    
+    
+    .overlay-open {
+        top: 0;
+    }
+    
+    .overlay-closed {
+        top: -100vw;
+    }
+
+    .beerIcon{
+        margin-top: 0;
+        margin-right: 35px;
+        background-image: url('./media/beer-icon.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 75px;
+        height: 75px;
+    }
+
+    .listed-beers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .beer-div {
+        font-size: 20px;
+        width: 45vw;
+    }
+   
+    .app-container > form {
+        /* justify-content: space-evenly; */
+        width: 50vw;
+        margin: 0 auto;
+    }
+    
+}
+
+@media only screen and (min-width: 1000px){
+    .listed-beers{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .beer-div {
+        font-size: 20px;
+        width: 30vw;
+    }
+}

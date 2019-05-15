@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-// import AddUgliesForm from './AddUgliesForm.js'
 
 class FavDrinks extends Component{
 

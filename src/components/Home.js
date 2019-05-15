@@ -31,12 +31,13 @@ class Home extends Component {
 
     render(){
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    {/* <select name="searchBy" onChange={this.handleChange}>
+            <div className='app-container'>
+                <h1>Match Your Malts</h1>
+                <form className='beer-form' onSubmit={this.handleSubmit}>
+                    <select name="searchBy" onChange={this.handleChange}>
                         <option value="name">by Name</option>
                         <option value="abv">by ABV</option>
-                    </select> */}
+                    </select>
 
                     <input type="text" name="nameInput" value={this.state.nameInput} onChange={this.handleChange}/>
                     {/* <h1>OR</h1>
@@ -46,14 +47,16 @@ class Home extends Component {
 
                     <button>Submit</button>
                 </form>
-                <div>
+                <div className='listed-beers'>
                     { this.props.beers.map(beer => 
-                    <div>
-                        <h1>NAME: {beer.tagline}</h1> 
-                        <p>IMAGE: {beer.image_url}</p>
-                        <img src={beer.image_url} alt="image"/>
-                        <p>DESC: {beer.description}</p>
-                        <p>ABV: {beer.abv}</p>
+                    <div className='beer-div'>
+                        <h1 className='beer-name'>NAME: {beer.tagline}</h1> 
+                        {/* <p >IMAGE: {beer.image_url}</p> */}
+                        <div className='beer-pic'>
+                            <img src={beer.image_url} alt="image"/>
+                        </div>
+                        <p className='description'>DESCRIPTION: {beer.description}</p>
+                        <p>ABV: {beer.abv}%</p>
                     </div>
                     )}
                 </div>
