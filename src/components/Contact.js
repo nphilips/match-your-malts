@@ -4,8 +4,8 @@ const Contact = () => {
     return (
         <div className="contact">
             Contact me here!
-            Linkedin: <a target="_blank" href="https://www.linkedin.com/in/nick-philips/">Click Here!</a><br>
-            GitHub: <a target='_blank' href="https://github.com/nphilips">Click Here!</a>
+            <h3>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/nick-philips/">Click Here!</a></h3>
+            <h3>GitHub: <a target='_blank' href="https://github.com/nphilips">Click Here!</a></h3>
         </div>
     )
 }
